@@ -53,6 +53,16 @@
             background-image: radial-gradient(#E4D5CE 1px, transparent 1px);
             background-size: 24px 24px;
         }
+        .hero-bg {
+            background-image: url('screenshots/такса.png');
+            background-size: cover;
+            background-position: center;
+            filter: blur(16px);
+            transform: scale(1.08);
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(28, 20, 12, 0.82) 0%, rgba(28, 20, 12, 0.55) 45%, rgba(28, 20, 12, 0.85) 100%);
+        }
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-8px); }
@@ -137,21 +147,24 @@
     </header>
 
     <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden dachshund-shape-bg">
+        <!-- Фоновая картинка таксы: размытая и затемнённая -->
+        <div class="absolute inset-0 hero-bg"></div>
+        <div class="absolute inset-0 hero-overlay"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <!-- Hero Text -->
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-coffee-200 text-coffee-800 font-semibold text-xs uppercase tracking-wider">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/25 text-white font-semibold text-xs uppercase tracking-wider">
                         <i class="fa-solid fa-mug-hot text-terracotta"></i> Авторская спешелти кофейня
                     </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-coffee-900 tracking-tight leading-[1.15]">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
                         Короткие лапки, <span class="text-terracotta">длинные разговоры</span> и лучший кофе!
                     </h1>
-                    <p class="text-lg text-coffee-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                    <p class="text-lg text-coffee-100 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
                         Добро пожаловать в уютный уголок, где ароматы свежеобжаренного зерна встречаются с теплом дружеских встреч. Заходите на чашечку фирменного рафа и угоститесь нашими легендарными десертами.
                     </p>
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                        <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-coffee-800 text-white font-bold text-center shadow-lg shadow-coffee-800/20 hover:bg-coffee-900 transition-all">
+                        <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-mustard text-coffee-900 font-bold text-center shadow-lg shadow-black/20 hover:bg-mustard-light transition-all">
                             Наше меню
                         </a>
                         <a href="#contacts" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white border-2 border-coffee-200 text-coffee-900 font-bold text-center hover:bg-coffee-100 transition-all">
@@ -159,18 +172,18 @@
                         </a>
                     </div>
                     <!-- Stats / Highlights -->
-                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-coffee-200/60 max-w-lg mx-auto lg:mx-0">
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-white/25 max-w-lg mx-auto lg:mx-0">
                         <div>
-                            <p class="text-2xl font-black text-coffee-900">100%</p>
-                            <p class="text-xs text-coffee-600 font-medium">Свежая обжарка</p>
+                            <p class="text-2xl font-black text-white">100%</p>
+                            <p class="text-xs text-coffee-100/80 font-medium">Свежая обжарка</p>
                         </div>
                         <div>
-                            <p class="text-2xl font-black text-coffee-900">Pet-friendly</p>
-                            <p class="text-xs text-coffee-600 font-medium">Любим хвостатых</p>
+                            <p class="text-2xl font-black text-white">Pet-friendly</p>
+                            <p class="text-xs text-coffee-100/80 font-medium">Любим хвостатых</p>
                         </div>
                         <div>
-                            <p class="text-2xl font-black text-coffee-900">4.9 ★</p>
-                            <p class="text-xs text-coffee-600 font-medium">Рейтинг гостей</p>
+                            <p class="text-2xl font-black text-white">4.9 ★</p>
+                            <p class="text-xs text-coffee-100/80 font-medium">Рейтинг гостей</p>
                         </div>
                     </div>
                 </div>
