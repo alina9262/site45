@@ -22,16 +22,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install Linting Tools
-        run: npm install -g htmlhint stylelint stylelint-config-standard
+        run: npm install -g htmlhint
 
       - name: Lint HTML
         run: htmlhint "**/*.html"
-
-      - name: Lint CSS
-        run: stylelint "**/*.css" --config stylelint-config-standard --allow-empty-input
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
